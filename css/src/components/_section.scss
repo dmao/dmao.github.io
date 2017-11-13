@@ -1,7 +1,7 @@
 .section__content {
   max-width: $max-width;
   margin: 0 auto;
-  padding: ritmo(2) 0
+  padding: ritmo(2) ritmo(1)
 }
 .section--intro {
   min-height: 100vh;
@@ -27,7 +27,7 @@
   .section__content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: ritmo(6) 0
+    padding: ritmo(6) ritmo(2)
   }
   .section__content--services {
     display: flex;
