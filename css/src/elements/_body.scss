@@ -1,0 +1,20 @@
+////
+/// Layout of the page
+///
+/// @group Elements
+///
+////
+
+@import '../mixins/_ritmo';
+$base-font-size: 16px;
+$base-line-unit: 8px;
+$base-line-multi: 3;
+// set font-size & line-height on html tag
+@include ritmo-baseline();
+
+/// Text default font and color
+body {
+  font-family: $font;
+  color: $color-text;
+  background: #f2f2f2;
+}

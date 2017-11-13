@@ -1,0 +1,14 @@
+////
+/// Links & buttons
+///
+/// @group Elements
+///
+////
+
+
+a {
+  text-decoration: none; color: $color-link;
+  text-decoration-skip: ink;
+
+  &:hover { text-decoration: underline; }
+}

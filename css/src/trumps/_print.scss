@@ -1,0 +1,11 @@
+////
+/// Print
+///
+/// @group Trumps
+///
+////
+
+// Print version
+@media print {
+  footer { display: none !important; }
+}

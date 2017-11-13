@@ -1,0 +1,6 @@
+.footer__text {
+  @include ritmo-font-size(12px);
+  @include ritmo-paddings(1);
+  text-align: center;
+  color: $grey
+}

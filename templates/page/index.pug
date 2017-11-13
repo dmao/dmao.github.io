@@ -1,0 +1,125 @@
+extends ../layout/main.pug
+
+block content
+  section.section.section--intro
+    .section__content
+      h1.intro__title
+        | Hi, I'm 
+        a(href="http://www.linkedin.com/pub/didier-mahaux/20/a22/631/", rel="noreferrer noopener", target="_blank") Didier Mahaux
+        |  a belgian UI developer, 
+        br
+        |  coding fast responsive websites & applications.
+      
+      img.intro__avatar(src="img/me/avatar.jpg", srcset="img/me/avatar.jpg 1x, img/me/avatar-2x.jpg 2x")
+
+    
+  section.section.section--services
+    .section__content.section__content--services
+      h2.section__title What I do
+      .services
+        .services__mod
+          h2.services__title Development
+          ul.services__items
+            li.services__item HTML5/CSS3
+            li.services__item CSS preprocessor
+            li.services__item PostCSS
+            li.services__item CSS Frameworks
+            li.services__item BEM/ITCSS/SMACSS/OOCSS
+            li.services__item Javascript/Vue/Angular/jQuery
+            li.services__item Git/NPM/Webpack/Gulp/Yeoman
+            li.services__item Wordpress integration & dev
+            li.services__item CMS integration
+        .services__mod
+          h2.services__title Skills  
+          ul.services__items
+            li.services__item Front-end / UI development
+            li.services__item Fast responsive website
+            li.services__item Responsive design
+            li.services__item User experience
+            li.services__item Living Style Guide
+            li.services__item Cross browser compatibility
+            li.services__item Problem solving and analytical
+            li.services__item Close attention to detail
+            li.services__item Responsive newsletters building
+  
+    
+  section.section.section
+    .section__content.section__content--portfolio
+      
+      h2.section__title Projects
+      
+      -var clients = [{ "name":"Kaboo", "slug": "kaboo", "company": "GIG", "sector": "gaming", "url": "http://www.kaboo.com" },{ "name":"Thrills", "slug": "thrills", "company": "GIG", "sector": "gaming", "url": "http://www.thrills.com" },{ "name":"Baxter", "slug": "baxter", "company": "Emakina", "sector": "Medical", "url": "http://www.baxter.be/fr/index.html"  },{ "name": "ING", "slug": "ing", "company": "Emakina", "sector": "Bank", "url": "https://www.ing.be/en/retail/" },{ "name": "Eastman", "slug": "eastman", "company": "TenTwelve", "sector": "Dance", "url": "http://www.east-man.be/fr/" },{ "name": "Wiels", "slug": "wiels", "company": "TenTwelve", "sector": "Museum", "url": "http://www.wiels.org/" },{ "name": "Mac's", "slug": "macs", "company": "TenTwelve", "sector": "Museum", "url": "http://www.mac-s.be/" },{ "name": "Heritage", "slug": "heritage", "company": "Afreak", "sector": "Fashion", "url": "http://heritage-wax.com/fr/heritage" }]
+      
+      ul.portfolio__items
+        each client in clients
+          li.portfolio__item
+            
+            a(href=client.url, rel="noreferrer noopener", target="_blank")
+              img.portfolio__illustration(src="img/clients/" + client.name + ".jpg", srcset="img/clients/" + client.slug + ".jpg 1x, img/clients/" + client.slug + "-2x.jpg 2x", alt="screenshot of " + client.slug + " website")
+              //- .portfolio__info  
+              //-   h4.portfolio__company=client.company
+                  
+            .portfolio__content
+              h2.portfolio__title=client.name
+              h3.portfolio__sector=client.sector  
+            
+  section.section.section
+    .section__content.section__content--more
+      h2.section__title More projects
+      .more
+        .more__mod
+          h4.more__title For 
+            a.more__title-link(href="https://gig.com/", rel="noreferrer noopener", target="_blank") GIG
+          
+          ul
+            li.more__item
+              a(href="https://www.superlenny.com", rel="noreferrer noopener", target="_blank") SuperLenny
+              | &nbsp;| Gaming
+
+        .more__mod
+          h4.more__title For 
+            a.more__title-link(href="https://emakina.be/", rel="noreferrer noopener", target="_blank") Emakina
+          
+          ul
+            li.more__item
+              a(href="https://www.bnpparibasfortis.be/portal/Start_BE_F.asp", rel="noreferrer noopener", target="_blank") BNP Paribas Fortis
+              | &nbsp;| Banking
+            li.more__item
+              a(href="https://www.electrabel.be/", rel="noreferrer noopener", target="_blank") Electrabel
+              | &nbsp;| Energy
+            li.more__item
+              a(href="https://www.deutschebank.be/fr/home-prospect.html", rel="noreferrer noopener", target="_blank") Deutsche Bank
+              | &nbsp;| Banking
+            li.more__item
+              a(href="https://www.proximus.be/fr/personal.html", rel="noreferrer noopener", target="_blank") Belgacom
+              | &nbsp;| Telephony
+        .more__mod
+          h4.more__title For 
+            a.more__title-link(href="http://www.tentwelve.com/", rel="noreferrer noopener", target="_blank") TenTwelve
+          
+          ul
+            li.more__item
+              a(href="http://www.fondationastichting.be/", rel="noreferrer noopener", target="_blank") Fondation A Stichting
+              | &nbsp;| Cultural
+            li.more__item
+              a(href="http://www.cedric-charlier.com/", rel="noreferrer noopener", target="_blank") Cédric Charlier
+              | &nbsp;| Fashion
+            li.more__item
+              a(href="https://www.boutiquetess.be/", rel="noreferrer noopener", target="_blank") Tess Store
+              | &nbsp;| Store
+            li.more__item
+              a(href="http://www.zoomarchitecture.be/", rel="noreferrer noopener", target="_blank") Zoom Architecture
+              | &nbsp;| Architecture              
+        .more__mod
+          h4.more__title For 
+            a.more__title-link(href="http://afreak.net/", rel="noreferrer noopener", target="_blank") Afreak
+          
+          ul
+            li.more__item
+              a(href="http://hotelsanctamaria.com/", rel="noreferrer noopener", target="_blank") Hotel Sancta Maria
+              | &nbsp;| Tourism
+            li.more__item
+              a(href="http://marytours-voyages.com/", rel="noreferrer noopener", target="_blank") Mary Travels
+              | &nbsp;| Tourism
+
+            

@@ -1,0 +1,42 @@
+.section__content {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: ritmo(2) 0
+}
+.section--intro {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section--services {
+  background: $white;
+}
+
+
+.section__title {
+  text-align: center;
+  text-transform: uppercase;
+  @include ritmo-font-size(24px);
+  @include ritmo-bottom(2)
+}
+
+@media screen and #{$media-medium} {
+  .section__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: ritmo(6) 0
+  }
+  .section__content--services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .section__title {
+    @include ritmo-bottom(4)
+  }
+}
