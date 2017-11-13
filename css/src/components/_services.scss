@@ -1,9 +1,9 @@
 .services__title {
   text-transform: uppercase;
   @include ritmo-font-size(16px);
-  padding: 0 0 8px;
-  margin: 0 0 8px;
-  border-bottom: 1px solid #ededed;
+  margin: 0 0 ritmo(1);
+  border: 0 solid $black-10;
+  @include ritmo-bottom-border()
 }
 .services__mod {
   margin: 0 0 ritmo(2);
