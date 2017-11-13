@@ -3,7 +3,7 @@ node_modules
 npm-debug.log
 Gemfile.lock
 
-css/*.css*
+
 js/*.js*
 /*.html
 
