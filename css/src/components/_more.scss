@@ -11,9 +11,17 @@
   text-decoration-color: $black-20;
 }
 
+@media screen and #{$media-small} {
+  .more {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: ritmo(2);
+  }
+}
+
 @media screen and #{$media-medium} {
   .more {
-    display: flex;
-    margin: 0 0 ritmo(3);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: ritmo(4);
   }
 }

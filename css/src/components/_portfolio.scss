@@ -8,17 +8,61 @@
   border-bottom: 1px solid $grey;
   background: $white;
 }
+.portfolio__link {
+  position: relative; // to set .portfolio__info
+  display: block;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+  background: $blue;
+  color: $color-text;
+
+  &:hover {
+    .portfolio__illustration {
+      opacity: 0.6;
+    }
+    .portfolio__info-item {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+
+  }
+}
+.portfolio__info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: ritmo(1);
+}
+
+.portfolio__info-item {
+  float: left;
+  clear: left;
+  margin: 0 0 2px 0;
+  padding: 0 ritmo(1);
+  text-transform: uppercase;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(-360px,0,0);
+  background: rgba(255,255,255,0.9);
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(-360px,0,0);
+  background: rgba(255,255,255,0.9);
+
+  &:nth-of-type(2) {
+    transition-delay: .05s;
+  }
+}
+
 .portfolio__content {
-  padding: 0 ritmo(1) ritmo(1)
+  padding: ritmo(1)
 }
 
 .portfolio__illustration {
   max-width: 100%;
-  border-radius: 4px 4px 0 0 ;
-  transition: transform .125s;
-  &:hover {
-    transform: scale(.95);
-  }
+  display: block;
+  border-radius: 4px 4px 0 0;
+  transition: opacity 0.35s, transform 0.35s;
 }
 
 .portfolio__title {
@@ -33,7 +77,13 @@
 
 @media screen and #{$media-medium} {
   .portfolio__items {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: ritmo(4);
+  }
+}
+
+@media screen and #{$media-large} {
+  .portfolio__info {
+    padding: ritmo(2);
   }
 }

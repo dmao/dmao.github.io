@@ -3,6 +3,13 @@
   margin: 0 auto;
   padding: ritmo(2) ritmo(1)
 }
+.section__title {
+  text-align: center;
+  text-transform: uppercase;
+  @include ritmo-font-size(24px);
+  @include ritmo-bottom(2)
+}
+
 .section--intro {
   min-height: 100vh;
   display: flex;
@@ -16,17 +23,14 @@
 }
 
 
-.section__title {
-  text-align: center;
-  text-transform: uppercase;
-  @include ritmo-font-size(24px);
-  @include ritmo-bottom(2)
+@media screen and #{$media-small} {
+  .section__content {
+    padding: ritmo(2) ritmo(4)
+  }
 }
 
 @media screen and #{$media-medium} {
   .section__content {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: ritmo(6) ritmo(2)
   }
   .section__content--services {

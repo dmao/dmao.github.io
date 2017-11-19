@@ -43,39 +43,31 @@ block content
             li.services__item Responsive newsletters building
   
     
-  section.section.section
+  section.section
     .section__content.section__content--portfolio
       
       h2.section__title Projects
       
-      -var clients = [{ "name":"Kaboo", "slug": "kaboo", "company": "GIG", "sector": "gaming", "url": "http://www.kaboo.com" },{ "name":"Thrills", "slug": "thrills", "company": "GIG", "sector": "gaming", "url": "http://www.thrills.com" },{ "name":"Baxter", "slug": "baxter", "company": "Emakina", "sector": "Medical", "url": "http://www.baxter.be/fr/index.html"  },{ "name": "ING", "slug": "ing", "company": "Emakina", "sector": "Bank", "url": "https://www.ing.be/en/retail/" },{ "name": "Eastman", "slug": "eastman", "company": "TenTwelve", "sector": "Dance", "url": "http://www.east-man.be/fr/" },{ "name": "Wiels", "slug": "wiels", "company": "TenTwelve", "sector": "Museum", "url": "http://www.wiels.org/" },{ "name": "Mac's", "slug": "macs", "company": "TenTwelve", "sector": "Museum", "url": "http://www.mac-s.be/" },{ "name": "Heritage", "slug": "heritage", "company": "Afreak", "sector": "Fashion", "url": "http://heritage-wax.com/fr/heritage" }]
+      -var clients = [{ "name":"Kaboo", "slug": "kaboo", "company": "GIG", "sector": "iGaming", "url": "https://www.kaboo.com" },{ "name":"Thrills", "slug": "thrills", "company": "GIG", "sector": "iGaming", "url": "https://www.thrills.com" },{ "name":"SuperLenny", "slug": "superlenny", "company": "GIG", "sector": "iGaming", "url": "http://www.superlenny.com" },{ "name": "Heritage", "slug": "heritage", "company": "Afreak", "sector": "Fashion", "url": "http://heritage-wax.com/fr/heritage" },{ "name": "Eastman", "slug": "eastman", "company": "TenTwelve", "sector": "Dance", "url": "http://www.east-man.be/fr/" },{ "name": "Wiels", "slug": "wiels", "company": "TenTwelve", "sector": "Museum", "url": "http://www.wiels.org/" },{ "name": "Mac's", "slug": "macs", "company": "TenTwelve", "sector": "Museum", "url": "http://www.mac-s.be/" },{ "name":"Baxter", "slug": "baxter", "company": "Emakina", "sector": "Medical", "url": "http://www.baxter.be/fr/index.html"  },{ "name": "ING", "slug": "ing", "company": "Emakina", "sector": "Bank", "url": "https://www.ing.be/en/retail/" },]
       
       ul.portfolio__items
         each client in clients
           li.portfolio__item
             
-            a(href=client.url, rel="noreferrer noopener", target="_blank")
+            a.portfolio__link(href=client.url, rel="noreferrer noopener", target="_blank")
               img.portfolio__illustration(src="img/clients/" + client.name + ".jpg", srcset="img/clients/" + client.slug + ".jpg 1x, img/clients/" + client.slug + "-2x.jpg 2x", alt="screenshot of " + client.slug + " website")
-              //- .portfolio__info  
-              //-   h4.portfolio__company=client.company
+              .portfolio__info
+                p.portfolio__info-item= 'Company: ' + client.company
+                //-p.portfolio__info-item=client.company
                   
             .portfolio__content
               h2.portfolio__title=client.name
               h3.portfolio__sector=client.sector  
             
-  section.section.section
+  section.section
     .section__content.section__content--more
       h2.section__title More projects
       .more
-        .more__mod
-          h4.more__title For 
-            a.more__title-link(href="https://gig.com/", rel="noreferrer noopener", target="_blank") GIG
-          
-          ul
-            li.more__item
-              a(href="https://www.superlenny.com", rel="noreferrer noopener", target="_blank") SuperLenny
-              | &nbsp;| Gaming
-
         .more__mod
           h4.more__title For 
             a.more__title-link(href="https://emakina.be/", rel="noreferrer noopener", target="_blank") Emakina

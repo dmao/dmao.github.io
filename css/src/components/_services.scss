@@ -13,12 +13,17 @@
   @include ritmo-font-size(16px);
 }
 
-@media screen and #{$media-medium} {
+@media screen and #{$media-small} {
   .services {
     display: flex;
   }
   .services__mod {
     flex: 1;
+  }
+}
+
+@media screen and #{$media-medium} {
+  .services__mod {
     margin: 0 ritmo(2);
   }
 }
